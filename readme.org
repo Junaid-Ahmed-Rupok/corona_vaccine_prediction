@@ -1,0 +1,23 @@
+* warning
+
+This is merely a development branch. 
+
+** what it is
+
+It is an app that approaches the machine learning analysis of 'vaccine type prediction' 
+based on some features.
+
+With a view to achieving this goal, a huge dataset was collected beforehand and
+was eventually handled with utmost precision for the analysis.
+
+The analysis doesn't focus on only a single ML algorithm. It undertakes multiple ML algorithms
+that include ensemble and tree type algorithms as well and eventually, the dataset was trained with
+all the algorithms but the best one was selected using the cross validation technique.
+
+** build the app
+
+See [[file:BUILD-INFO.org][BUILD-INFO.org]] file for details.
+
+** license
+
+This project is licensed under the MIT license. See [[file:LICENSE.txt][LICENSE.txt]] for details.

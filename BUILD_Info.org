@@ -1,0 +1,37 @@
+* Build Information
+
+** Project Information
+  - Project Name: Predicting the government type
+
+** Build Environment
+  - Pycharm (Community Edition): 2024.2.4
+  - Python Version: 3.12
+
+** Dependencies
+  - xgboost
+  - flask
+  - joblib
+  - scikit-learn
+  - pandas
+  - numpy
+
+** Build Status
+  - Success: Yes
+
+** Build Instructions
+
+*** Common steps
+**** 1. Clone the repository
+    - Make sure [[https://git-scm.com][git]] is installed.
+    - Make sure [[https://www.python.org][python]] is installed.
+    - Open a terminal and clone the project repository:
+#+begin_src bash
+ git clone "https://github.com/Junaid-Ahmed-Rupok/corona_vaccine_prediction"
+ cd Corona_Virus
+ python app.py
+#+end_src
+
+*Notice*: If it is the first time, install the dependencies:
+#+begin_src bash
+ pip3 install -r requirements.txt
+#+end_src

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictor</title>
+</head>
+<body>
+    <h2>Enter the following Info</h2>
+
+    <form method="POST" action="/predict">
+        {% for name, options in features.items() %}
+            <label>{{ name }}:
+                {% if options == "number" %}
+                    <input type="number" name="{{ name }}" required>
+                {% else %}
+                    <select name="{{ name }}">
+                        {% for option in options %}
+                            <option value="{{ option }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+            </label><br><br>
+        {% endfor %}
+        <button type="submit">Predict </button>
+    </form>
+
+    {% if predictions %}
+        <h3>Predicted Vaccine Type is : {{ predictions }}.</h3>
+    {% endif %}
+</body>
+</html>
