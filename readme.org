@@ -20,4 +20,3 @@ See [[file:BUILD-INFO.org][BUILD-INFO.org]] file for details.
 
 ** license
 
-This project is licensed under the MIT license. See [[file:LICENSE.txt][LICENSE.txt]] for details.
