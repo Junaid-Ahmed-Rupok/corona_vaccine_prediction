@@ -18,5 +18,4 @@ all the algorithms but the best one was selected using the cross validation tech
 
 See [[file:BUILD-INFO.org][BUILD-INFO.org]] file for details.
 
-** license
 
