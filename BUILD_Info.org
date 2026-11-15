@@ -1,7 +1,7 @@
 * Build Information
 
 ** Project Information
-  - Project Name: Predicting the government type
+  - Project Name: COVID-19 Vaccine Type Prediction
 
 ** Build Environment
   - Pycharm (Community Edition): 2024.2.4
@@ -27,7 +27,7 @@
     - Open a terminal and clone the project repository:
 #+begin_src bash
  git clone "https://github.com/Junaid-Ahmed-Rupok/corona_vaccine_prediction"
- cd Corona_Virus
+ cd corona_vaccine_prediction
  python app.py
 #+end_src
 

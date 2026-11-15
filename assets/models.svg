@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420">
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b6b7a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="420" rx="16" fill="#f7fafc"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="600" y="44" text-anchor="middle" font-size="24" font-weight="700" fill="#0f2a44">Model selection: five candidates, one winner</text>
+
+    <!-- candidates -->
+    <g text-anchor="start">
+      <rect x="40" y="80" width="520" height="54" rx="10" fill="#fff" stroke="#c9d6e2"/>
+      <rect x="40" y="80" width="8" height="54" rx="4" fill="#e76f51"/>
+      <text x="64" y="104" font-size="18" font-weight="700" fill="#0f2a44">AdaBoost</text>
+      <text x="64" y="124" font-size="13" fill="#6b7c8c">200 estimators · lr 0.2 · ensemble (boosting)</text>
+      <text x="545" y="113" text-anchor="end" font-size="13" fill="#1b5e7a">feature importances</text>
+
+      <rect x="40" y="144" width="520" height="54" rx="10" fill="#fff" stroke="#c9d6e2"/>
+      <rect x="40" y="144" width="8" height="54" rx="4" fill="#f4a261"/>
+      <text x="64" y="168" font-size="18" font-weight="700" fill="#0f2a44">XGBoost</text>
+      <text x="64" y="188" font-size="13" fill="#6b7c8c">200 estimators · lr 0.2 · gradient boosting</text>
+      <text x="545" y="177" text-anchor="end" font-size="13" fill="#1b5e7a">feature importances</text>
+
+      <rect x="40" y="208" width="520" height="54" rx="10" fill="#fff" stroke="#c9d6e2"/>
+      <rect x="40" y="208" width="8" height="54" rx="4" fill="#2a9d8f"/>
+      <text x="64" y="232" font-size="18" font-weight="700" fill="#0f2a44">Random Forest</text>
+      <text x="64" y="252" font-size="13" fill="#6b7c8c">ensemble (bagging)</text>
+      <text x="545" y="241" text-anchor="end" font-size="13" fill="#1b5e7a">feature importances</text>
+
+      <rect x="40" y="272" width="520" height="54" rx="10" fill="#fff" stroke="#c9d6e2"/>
+      <rect x="40" y="272" width="8" height="54" rx="4" fill="#264653"/>
+      <text x="64" y="296" font-size="18" font-weight="700" fill="#0f2a44">Decision Tree</text>
+      <text x="64" y="316" font-size="13" fill="#6b7c8c">single tree</text>
+      <text x="545" y="305" text-anchor="end" font-size="13" fill="#1b5e7a">feature importances</text>
+
+      <rect x="40" y="336" width="520" height="54" rx="10" fill="#fff" stroke="#c9d6e2"/>
+      <rect x="40" y="336" width="8" height="54" rx="4" fill="#8a5cb8"/>
+      <text x="64" y="360" font-size="18" font-weight="700" fill="#0f2a44">Gaussian Naive Bayes</text>
+      <text x="64" y="380" font-size="13" fill="#6b7c8c">probabilistic baseline</text>
+      <text x="545" y="369" text-anchor="end" font-size="13" fill="#1b5e7a">mutual information</text>
+    </g>
+
+    <g stroke="#5b6b7a" stroke-width="2" fill="none">
+      <path d="M562 107 C 640 107, 640 235, 690 235"/>
+      <path d="M562 171 C 630 171, 630 235, 690 235"/>
+      <path d="M562 235 L 690 235"/>
+      <path d="M562 299 C 630 299, 630 235, 690 235"/>
+      <path d="M562 363 C 640 363, 640 235, 690 235" marker-end="url(#a2)"/>
+    </g>
+
+    <rect x="694" y="175" width="210" height="120" rx="14" fill="#1b5e7a"/>
+    <text x="799" y="220" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">5-fold CV</text>
+    <text x="799" y="246" text-anchor="middle" font-size="14" fill="#cfe6ef">mean accuracy on</text>
+    <text x="799" y="266" text-anchor="middle" font-size="14" fill="#cfe6ef">training split</text>
+
+    <line x1="906" y1="235" x2="958" y2="235" stroke="#5b6b7a" stroke-width="2.5" marker-end="url(#a2)"/>
+
+    <rect x="962" y="155" width="200" height="160" rx="14" fill="#e6f7f4" stroke="#2a9d8f" stroke-width="2.5"/>
+    <text x="1062" y="196" text-anchor="middle" font-size="19" font-weight="700" fill="#2a9d8f">Best model</text>
+    <text x="1062" y="226" text-anchor="middle" font-size="14" fill="#33475b">refit on train set</text>
+    <text x="1062" y="250" text-anchor="middle" font-size="14" fill="#33475b">evaluated on test set</text>
+    <text x="1062" y="274" text-anchor="middle" font-size="14" fill="#33475b">+ overfitting check</text>
+    <text x="1062" y="298" text-anchor="middle" font-size="13" font-weight="600" fill="#1b5e7a">→ model.pkl</text>
+  </g>
+</svg>

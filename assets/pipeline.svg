@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b6b7a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="360" rx="16" fill="#f7fafc"/>
+  <text x="600" y="44" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#0f2a44">End-to-end pipeline</text>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <!-- 1 -->
+    <rect x="30" y="90" width="200" height="200" rx="14" fill="#ffffff" stroke="#1b5e7a" stroke-width="2"/>
+    <rect x="30" y="90" width="200" height="44" rx="14" fill="#1b5e7a"/>
+    <rect x="30" y="120" width="200" height="14" fill="#1b5e7a"/>
+    <text x="130" y="119" font-size="18" font-weight="700" fill="#fff">1 · Raw data</text>
+    <text x="130" y="175" font-size="15" fill="#33475b">COVID-19 patient</text>
+    <text x="130" y="197" font-size="15" fill="#33475b">records (CSV)</text>
+    <text x="130" y="240" font-size="13" fill="#6b7c8c">target:</text>
+    <text x="130" y="260" font-size="14" font-weight="600" fill="#1b5e7a">Vaccine_Type</text>
+
+    <!-- 2 -->
+    <rect x="270" y="90" width="200" height="200" rx="14" fill="#ffffff" stroke="#1b5e7a" stroke-width="2"/>
+    <rect x="270" y="90" width="200" height="44" rx="14" fill="#1b5e7a"/>
+    <rect x="270" y="120" width="200" height="14" fill="#1b5e7a"/>
+    <text x="370" y="119" font-size="18" font-weight="700" fill="#fff">2 · Cleaning</text>
+    <text x="370" y="166" font-size="14" fill="#33475b">drop &gt;60% null cols</text>
+    <text x="370" y="190" font-size="14" fill="#33475b">mean / mode imputation</text>
+    <text x="370" y="214" font-size="14" fill="#33475b">remove duplicates</text>
+    <text x="370" y="238" font-size="14" fill="#33475b">ordinal encoding</text>
+    <text x="370" y="272" font-size="12" fill="#6b7c8c">cleaning.py</text>
+
+    <!-- 3 -->
+    <rect x="510" y="90" width="200" height="200" rx="14" fill="#ffffff" stroke="#1b5e7a" stroke-width="2"/>
+    <rect x="510" y="90" width="200" height="44" rx="14" fill="#1b5e7a"/>
+    <rect x="510" y="120" width="200" height="14" fill="#1b5e7a"/>
+    <text x="610" y="119" font-size="18" font-weight="700" fill="#fff">3 · Features</text>
+    <text x="610" y="166" font-size="14" fill="#33475b">top-10 features</text>
+    <text x="610" y="190" font-size="14" fill="#33475b">per model</text>
+    <text x="610" y="220" font-size="13" fill="#33475b">tree importances /</text>
+    <text x="610" y="240" font-size="13" fill="#33475b">mutual information</text>
+    <text x="610" y="272" font-size="12" fill="#6b7c8c">80 / 20 split</text>
+
+    <!-- 4 -->
+    <rect x="750" y="90" width="200" height="200" rx="14" fill="#ffffff" stroke="#1b5e7a" stroke-width="2"/>
+    <rect x="750" y="90" width="200" height="44" rx="14" fill="#1b5e7a"/>
+    <rect x="750" y="120" width="200" height="14" fill="#1b5e7a"/>
+    <text x="850" y="119" font-size="18" font-weight="700" fill="#fff">4 · Model select</text>
+    <text x="850" y="166" font-size="14" fill="#33475b">5 classifiers</text>
+    <text x="850" y="190" font-size="14" fill="#33475b">5-fold CV accuracy</text>
+    <text x="850" y="214" font-size="14" fill="#33475b">overfitting check</text>
+    <text x="850" y="238" font-size="14" fill="#33475b">→ best model saved</text>
+    <text x="850" y="272" font-size="12" fill="#6b7c8c">training.py</text>
+
+    <!-- 5 -->
+    <rect x="990" y="90" width="180" height="200" rx="14" fill="#e6f7f4" stroke="#2a9d8f" stroke-width="2"/>
+    <rect x="990" y="90" width="180" height="44" rx="14" fill="#2a9d8f"/>
+    <rect x="990" y="120" width="180" height="14" fill="#2a9d8f"/>
+    <text x="1080" y="119" font-size="18" font-weight="700" fill="#fff">5 · Web app</text>
+    <text x="1080" y="166" font-size="14" fill="#33475b">Flask form built</text>
+    <text x="1080" y="190" font-size="14" fill="#33475b">from model's</text>
+    <text x="1080" y="214" font-size="14" fill="#33475b">own features</text>
+    <text x="1080" y="238" font-size="14" fill="#33475b">→ vaccine type</text>
+    <text x="1080" y="272" font-size="12" fill="#6b7c8c">app.py</text>
+  </g>
+
+  <g stroke="#5b6b7a" stroke-width="2.5" marker-end="url(#arr)">
+    <line x1="232" y1="190" x2="266" y2="190"/>
+    <line x1="472" y1="190" x2="506" y2="190"/>
+    <line x1="712" y1="190" x2="746" y2="190"/>
+    <line x1="952" y1="190" x2="986" y2="190"/>
+  </g>
+  <text x="600" y="330" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#6b7c8c">Artifacts passed between stages: cleaned_df.pkl · encoder.pkl · model.pkl</text>
+</svg>
